@@ -1,0 +1,95 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Services Page Specific Styles */
+.services-container {
+    padding: 2em;
+    text-align: center;
+    background-color: white;
+    margin: 2em auto;
+    max-width: 1200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.services-container h1 {
+    color: #008000;
+    margin-bottom: 1em;
+}
+
+.services-container p {
+    margin-bottom: 2em;
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Services Grid */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.service-item {
+    flex: 1 1 calc(33.333% - 2em);
+    background: #f4f4f4;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: left;
+}
+
+.service-item h2 {
+    color: green;
+
+
+
+
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+    margin-bottom: 1em;
+}
+
+.service-item p {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        flex: 1 1 100%;
+    }
+}
+
+/* Footer Styling */
+footer {
+    background-color: #008000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

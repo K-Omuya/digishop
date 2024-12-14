@@ -1,0 +1,247 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Services - ShopWithSimon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background-color: #2f6c27; /* Green color */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Services Section */
+        #services {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .services-container h1 {
+            font-size: 30px;
+            color: #2f6c27; /* Green color */
+            margin-bottom: 20px;
+        }
+
+        .services-container p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .service-item {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-item h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .service-item p {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #2f6c27; /* Green color */
+            color: white;
+            padding: 20px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin: 10px 0;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer-section ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .footer-bottom a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">ShopWithSimon</div>
+    <nav>
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li><a href="{% url 'contacts' %}">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- Services Section -->
+<section id="services">
+    <div class="services-container">
+        <h1>Our Services</h1>
+        <p>
+            At ShopWithSimon, we aim to make your shopping experience seamless, efficient, and rewarding. Explore the wide range of services we offer.
+        </p>
+
+        <div class="services-grid">
+            <div class="service-item">
+                <h2>Price Comparison</h2>
+                <p>Compare prices from multiple e-commerce platforms to find the best deals for your desired products.</p>
+            </div>
+
+            <div class="service-item">
+                <h2>Second Hand Goods</h2>
+                <p>Enable users to easily shop second-hand goods with a user-friendly interface.</p>
+            </div>
+
+            <div class="service-item">
+                <h2>Order Tracking</h2>
+                <p>Track the status of your orders and stay informed about delivery updates.</p>
+            </div>
+
+            <div class="service-item">
+                <h2>Commodity Categories</h2>
+                <p>Search and browse products across various categories like electronics, fashion, groceries, and more.</p>
+            </div>
+
+            <div class="service-item">
+                <h2>Blog & Tips</h2>
+                <p>Stay updated with the latest shopping trends, product reviews, and expert buying tips.</p>
+            </div>
+
+            <div class="service-item">
+                <h2>Customer Support</h2>
+                <p>Our dedicated team is here to assist you with any queries or concerns, 24/7.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h2>ShopWithSimon</h2>
+        </div>
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Compare the prices from various e-commerce websites in Kenya.</p>
+            <p>Sell and buy second-hand goods</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#pricing">Services</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>
+                <li><a href="contacts.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>This webpage was designed by <a href="#">SIMON OTIENO</a></p>
+        <p>&copy; 2024</p>
+    </div>
+</footer>
+
+</body>
+</html>

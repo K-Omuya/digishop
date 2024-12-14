@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/css/urembo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>index</title>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">ShopWithSimon</div>
+    <nav>
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="track.html">Track Orders</a></li>
+            <li><a href="categories.html">Categories</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- Main Section: Search and Comparison -->
+    <section id="main">
+        <div class="main-container">
+            <h1>Welcome to ShopWithSimon!</h1>
+            <p>Find the best deals and compare prices across multiple platforms.</p>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search for products...">
+                <button id="search-button" class="btn">Search</button>
+            </div>
+
+            <!-- Price Comparison -->
+            <div class="comparison-container">
+                <h2>Compare Prices Across Platforms</h2>
+                <p>Enter the product name in the search bar to compare prices from various e-commerce platforms.</p>
+                <button id="compare-button" class="btn" >
+                    <a href="categories.html">Compare Prices</a>
+                </button>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="featured-products">
+        <div class="product-container">
+            <h2>Featured Products</h2>
+            <div class="product-card">
+                <img src="assets/img/download%20(6).jpeg" alt="Product 1">
+                <p>Lanovo X30</p>
+                <p>Ksh.12,550</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/download%20(5).jpeg" alt="Product 2">
+                <p>HP Elite Book</p>
+                <p>Ksh.22,330</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="assets/img/download%20(3).jpeg" alt="Product 3">
+                <p>Sumsung Galaxy</p>
+                <p>Ksh.15,599</p>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 ShopWithSimon. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript (Optional) -->
+    <script>
+        document.getElementById('search-button').addEventListener('click', function() {
+            let searchQuery = document.getElementById('search-bar').value;
+            alert('You searched for: ' + searchQuery);
+        });
+
+        document.getElementById('compare-button').addEventListener('click', function() {
+            alert('Comparing prices across platforms...');
+        });
+    </script>
+
+
+
+</body>
+</html>

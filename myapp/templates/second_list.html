@@ -1,0 +1,24 @@
+{% load static  %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second-Hand Items</title>
+</head>
+<body>
+    <h1>Second-Hand Items</h1>
+    <ul>
+        {% for item in items %}
+            <li>
+                <h2>{{ item.name }}</h2>
+                <p>Price: ${{ item.price }}</p>
+                <p>{{ item.description }}</p>
+                {% if item.image %}
+                    <img src="{{ item.image.url }}" alt="{{ item.name }}" width="200">
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

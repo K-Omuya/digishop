@@ -1,0 +1,32 @@
+{% load static   %}
+<!-- myapp/templates/myapp/search_results.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search for Products</h1>
+    <form method="get" action="{% url 'search' %}">
+        {{ form.as_p }}
+        <button type="submit">Search</button>
+    </form>
+
+    {% if products %}
+        <h2>Results:</h2>
+        <ul>
+            {% for product in products %}
+                <li>{{ product.name }} - 
+                    {% for price in product.productprice_set.all %}
+                        {{ price.platform.name }}: {{ price.price }}<br>
+                    {% endfor %}
+                </li>
+            {% endfor %}
+        </ul>
+    {% elif request.GET %}
+        <p>No products found.</p>
+    {% endif %}
+</body>
+</html>

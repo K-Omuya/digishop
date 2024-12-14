@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us - ShopWithSimon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #006400; /* Dark Green */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover,
+        nav ul li a:focus {
+            color: #ADFF2F; /* Lighter Green */
+        }
+
+        /* About Section */
+        #about {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .about-container h1 {
+            font-size: 30px;
+            color: #006400;
+            margin-bottom: 20px;
+        }
+
+        .about-container p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .about-item {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-item h2 {
+            font-size: 24px;
+            color: #006400;
+            margin-bottom: 15px;
+        }
+
+        .about-item p,
+        .about-item ul {
+            font-size: 16px;
+            color: #555;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #006400;
+            color: white;
+            padding: 30px 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #ADFF2F; /* Lighter Green */
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin: 10px 0;
+        }
+
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .footer-section ul li a:hover {
+            color: #ADFF2F;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .footer-bottom a {
+            color: #ADFF2F;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="logo">ShopWithSimon</div>
+    <nav>
+        <ul class="navbar">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+            <li><a href="{% url 'services' %}">Services</a></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li><a href="{% url 'contacts' %}">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- About Section -->
+<section id="about">
+    <div class="about-container">
+        <h1>About ShopWithSimon</h1>
+        <p>
+            ShopWithSimon is your trusted platform for comparing prices from various e-commerce websites in Kenya.
+            We aim to simplify your shopping experience by providing a seamless and efficient way to find the best deals
+            and save both time and money.
+        </p>
+
+        <div class="about-grid">
+            <div class="about-item">
+                <h2>Our Mission</h2>
+                <p>
+                    To empower online shoppers with accurate price comparisons and help them make smarter purchasing decisions.
+                </p>
+            </div>
+
+            <div class="about-item">
+                <h2>Our Vision</h2>
+                <p>
+                    To become Kenya's leading price comparison platform, enhancing the online shopping experience for all users.
+                </p>
+            </div>
+
+            <div class="about-item">
+                <h2>Why Us?</h2>
+                <ul>
+                    <li>Reliable price comparison</li>
+                    <li>Wide variety of products</li>
+                    <li>User-friendly interface</li>
+                    <li>Quick and easy order tracking</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h2>ShopWithSimon</h2>
+        </div>
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>Compare prices from various e-commerce websites in Kenya.</p>
+        </div>
+
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#pricing">Services</a></li>
+                <li><a href="#faqs">FAQs</a></li>
+                <li><a href="#contacts">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>This webpage was designed by <a href="#">SIMON OTIENO</a></p>
+        <p>&copy; 2024</p>
+    </div>
+</footer>
+
+</body>
+</html>
